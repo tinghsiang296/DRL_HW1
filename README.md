@@ -5,8 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Render](https://img.shields.io/badge/Deployment-Render-brightgreen.svg)](https://render.com/)
 
-> **線上展示網址：** [https://your-app-name.onrender.com](https://your-app-name.onrender.com)  
-> *(請將此處替換為你的 Render 實際 URL)*
+> **線上展示網址：** https://drl-hw1-uago.onrender.com/
 
 ---
 
@@ -33,9 +32,7 @@
 - **Deployment:** Render (PaaS)
 - **Environment:** Gunicorn (Production WSGI)
 
-## 🚀 本地執行指南 (Getting Started)
 
-若想在本地環境執行此專案，請參考以下步驟：
 
 1. **複製專案：**
    ```bash
