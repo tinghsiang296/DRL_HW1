@@ -1,6 +1,43 @@
-🚀 GridWorld Value Iteration Dashboard
-部署網址：https://drl-hw1-uago.onrender.com/
+# 🤖 GridWorld Value Iteration Dashboard
 
-📝 專案概述 (Overview)本 GridWorld 應用程式採用 Flask 作為後端伺服器，並結合具備高度互動性的 HTML/CSS/JS 前端介面。本系統完整實作了策略評估 (Policy Evaluation) 與 價值疊代 (Value Iteration) 演算法，旨在 $n \times n$ 的網格環境中，模擬智慧體如何避開障礙物並找出從起點到終點的最佳路徑。
-✨ 核心功能 (Key Features)動態網格生成： 支援透過滑桿自定義 $n=5$ 至 $n=9$ 的網格大小。直覺式互動配置： * 綠色機器人： 代表起點 (Start)。紅色旗幟： 代表終點 (Goal)。灰色斜紋格： 代表障礙物 (Obstacles)，上限為 $n-2$ 個。雙重演算法演示：隨機策略評估： 視覺化呈現隨機動作下的狀態價值 $V(s)$。最佳價值疊代： 使用 $\gamma = 0.9$ 計算，並即時更新各狀態的最優價值 $V^*(s)$ 與最佳策略箭頭 ($\pi^*$)。現代化視覺設計： 採用 玻璃擬態 (Glassmorphism) 風格，搭配霓虹發光效果與流暢的懸停動畫，提升數據可視化的易讀性。
-✅ 驗證與自動化測試 (Verification)本專案已通過自動化瀏覽器子代理 (Subagent) 的完整測試：測試環境： $5 \times 5$ 網格。節點配置： 起點 $(0, 0)$、終點 $(4, 4)$、障礙物位於 $(1,1), (2,2), (3,3)$。計算結果： 價值自終點向外呈梯度擴散，在鄰近終點處 $(3, 4)$ 與 $(4, 3)$ 達到 Reward $1.00$，並依折扣因子 $0.9$ 平滑遞減，驗證演算法邏輯完全正確
+[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Framework-Flask-lightgrey.svg)](https://flask.palletsprojects.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Render](https://img.shields.io/badge/Deployment-Render-brightgreen.svg)](https://render.com/)
+
+> **線上展示網址：** [https://your-app-name.onrender.com](https://your-app-name.onrender.com)  
+> *(請將此處替換為你的 Render 實際 URL)*
+
+---
+
+## 📖 專案概述 (Overview)
+
+本專案實作了一個互動式的 **GridWorld** 環境，專為強化學習中的 **馬可夫決策過程 (MDP)** 視覺化而設計。透過 Flask 後端運算與現代化的前端介面，使用者可以即時觀察 **策略評估 (Policy Evaluation)** 與 **價值疊代 (Value Iteration)** 演算法的收斂過程。
+
+這不僅是一個學術作業的實作，更是一個將複雜的強化學習理論轉化為直覺視覺回饋的工具。
+
+## ✨ 核心特色 (Key Features)
+
+- 🎨 **現代化視覺設計：** 採用 **Glassmorphism (玻璃擬態)** 風格，結合霓虹發光路徑與平滑動畫。
+- 🖱️ **高度互動性：** - 動態調整網格大小 ($5 \times 5$ 至 $9 \times 9$)。
+  - 滑鼠點擊即可佈置起點 (Robot)、終點 (Goal) 與障礙物。
+- 🧠 **演算法視覺化：**
+  - **策略評估：** 顯示隨機策略下的狀態價值流動。
+  - **價值疊代：** 以 $\gamma = 0.9$ 計算最優價值函數 $V^*(s)$，並顯示最佳策略箭頭 $\pi^*$。
+- 📱 **響應式佈局：** 適配不同螢幕尺寸，保持清晰的圖表呈現。
+
+## 🛠️ 技術棧 (Tech Stack)
+
+- **Backend:** Python 3.11 / Flask
+- **Frontend:** HTML5, CSS3 (Flexbox/Grid), Vanilla JavaScript
+- **Deployment:** Render (PaaS)
+- **Environment:** Gunicorn (Production WSGI)
+
+## 🚀 本地執行指南 (Getting Started)
+
+若想在本地環境執行此專案，請參考以下步驟：
+
+1. **複製專案：**
+   ```bash
+   git clone [https://github.com/tinghsiang296/DRL_HW1.git](https://github.com/tinghsiang296/DRL_HW1.git)
+   cd DRL_HW1
