@@ -34,7 +34,3 @@
 
 
 
-1. **複製專案：**
-   ```bash
-   git clone [https://github.com/tinghsiang296/DRL_HW1.git](https://github.com/tinghsiang296/DRL_HW1.git)
-   cd DRL_HW1
