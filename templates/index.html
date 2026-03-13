@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridWorld Policy Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-border-all"></i> GridWorld RL</h1>
+            <p>Value Iteration and Policy Evaluation in an n×n environment.</p>
+        </header>
+
+        <main class="dashboard">
+            <aside class="sidebar glass-panel">
+                <div class="control-group">
+                    <label for="grid-size">Grid Size (n: 5-9)</label>
+                    <div class="slider-container">
+                        <input type="range" id="grid-size" min="5" max="9" value="5">
+                        <span id="grid-size-val">5x5</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Placement Mode</label>
+                    <div class="mode-toggles">
+                        <button class="mode-btn active" data-mode="start">
+                            <i class="fa-solid fa-play"></i> Start
+                        </button>
+                        <button class="mode-btn" data-mode="end">
+                            <i class="fa-solid fa-flag-checkered"></i> Goal
+                        </button>
+                        <button class="mode-btn" data-mode="obstacle">
+                            <i class="fa-solid fa-hill-rockslide"></i> Obstacle
+                        </button>
+                    </div>
+                    <div class="constraints-info">
+                        Obstacles: <span id="obs-count">0</span> / <span id="obs-max">3</span>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="btn-random-policy" class="action-btn">
+                        <i class="fa-solid fa-dice"></i> Show Random Policy
+                    </button>
+                    <button id="btn-eval-random" class="action-btn">
+                        <i class="fa-solid fa-calculator"></i> Evaluate Random Policy
+                    </button>
+                    <button id="btn-value-iter" class="action-btn primary">
+                        <i class="fa-solid fa-brain"></i> Run Value Iteration (Optimal)
+                    </button>
+                    <button id="btn-reset" class="action-btn danger">
+                        <i class="fa-solid fa-rotate-right"></i> Reset Grid
+                    </button>
+                </div>
+            </aside>
+
+            <section class="grid-section glass-panel">
+                <div id="grid-container" class="grid-container">
+                    <!-- JavaScript will generate the grid here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
